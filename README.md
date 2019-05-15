@@ -1,9 +1,9 @@
 # Reffects playground
 
-This is a simple application to play with `reffects` and `reffects-store`. The view layer is managed using `React`. This is about a simple books finder that uses the (Open Library Search Api)[https://openlibrary.org/dev/docs/api/search] to retrieve all books.
+This is a simple application to play with `reffects` and `reffects-store`. The view layer is managed using `React`. This is about a simple books finder that uses the [Open Library Search Api](https://openlibrary.org/dev/docs/api/search) to retrieve all books.
 
-- **(reffects)[reffects]**: A synchronous event bus with effects and coeffects.
-- **(reffects-store)[reffects-store]**: A reffects implementation for React to manage and subscribe components to state changes.
+- **[reffects](reffects)**: A synchronous event bus with effects and coeffects.
+- **[reffects-store](reffects-store)**: A reffects implementation for React to manage and subscribe components to state changes.
 
 ## Some key concepts
 
