@@ -1,0 +1,25 @@
+{
+  "name": "react-reffects-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --no-cache --open",
+    "build": "parcel build index.html --no-cache"
+  },
+  "dependencies": {
+    "lodash.clone": "4.5.0",
+    "lodash.get": "4.4.2",
+    "lodash.setwith": "4.3.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "reffects": "0.1.0",
+    "reffects-store": "0.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1",
+    "@babel/preset-react": "7.0.0"
+  },
+  "keywords": []
+}
