@@ -12,7 +12,6 @@ import registerBookListEvents from "./components/BookList/events";
 import Finder from "./components/Finder";
 import SubscribedBookList from "./components/BookList/BookList";
 
-console.log(process.env);
 // Register coeffects
 registerApiUrlCoeffect();
 
