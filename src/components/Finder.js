@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Finder({ onUserSearch }) {
-  const [queryText, setQueryText] = useState("");
+  const [queryText, setQueryText] = useState('');
 
   return (
-    <form>
+    <section>
       <input type="search" onChange={e => setQueryText(e.target.value)} />
       <button type="button" onClick={() => onUserSearch(queryText)}>
         Find
       </button>
-    </form>
+    </section>
   );
 }
 
