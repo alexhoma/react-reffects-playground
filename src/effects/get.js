@@ -1,7 +1,7 @@
-import { registerEffectHandler, dispatch } from "reffects";
+import { registerEffectHandler, dispatch } from 'reffects';
 
 export default function register() {
-  registerEffectHandler("get", function get(requestDescription) {
+  registerEffectHandler('get', function get(requestDescription) {
     const { url, successEvent } = requestDescription;
 
     fetch(url)

@@ -1,24 +1,30 @@
-import React from "react";
-import { subscribe } from "reffects-store";
+import React from 'react';
+import { subscribe } from 'reffects-store';
+import './BookList.css';
 
-function BooksList({ books }) {
+function BookList({ books }) {
   if (books.length === 0) {
     return <span>No books found</span>;
   }
 
   return (
-    <ul>
+    <ul className="BookList">
       {books.map(book => (
-        <li key={book.id}>{book.title}</li>
+        <li key={book.id}>
+          <div className="BookList__book">
+            <img src={book.cover} />
+            <b>{book.title}</b>
+          </div>
+        </li>
       ))}
     </ul>
   );
 }
 
-const SubscribedBooksList = subscribe(function mapStateToProps(state) {
+const SubscribedBookList = subscribe(function mapStateToProps(state) {
   return {
     books: state.books
   };
 });
 
-export default SubscribedBooksList(BooksList);
+export default SubscribedBookList(BookList);

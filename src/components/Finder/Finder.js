@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import './Finder.css';
 
 function Finder({ onUserSearch }) {
   const [queryText, setQueryText] = useState('');
 
   return (
-    <section>
+    <div className="Finder">
       <input type="search" onChange={e => setQueryText(e.target.value)} />
       <button type="button" onClick={() => onUserSearch(queryText)}>
         Find
       </button>
-    </section>
+    </div>
   );
 }
 

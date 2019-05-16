@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { dispatch } from "reffects";
+import { dispatch } from 'reffects';
 
-import store from "./store";
-import registerApiUrlCoeffect from "./coeffects/api-url";
-import registerGetEffect from "./effects/get";
-import registerMutateEffect from "./effects/mutate";
-import registerBookListEvents from "./components/BookList/events";
+import store from './store';
+import registerApiUrlCoeffect from './coeffects/api-url';
+import registerGetEffect from './effects/get';
+import registerMutateEffect from './effects/mutate';
+import registerBookListEvents from './components/BookList/events';
 
-import Finder from "./components/Finder";
-import SubscribedBookList from "./components/BookList/BookList";
+import Finder from './components/Finder/Finder';
+import SubscribedBookList from './components/BookList/BookList';
 
 // Register coeffects
 registerApiUrlCoeffect();
@@ -26,7 +26,7 @@ function Application() {
   // Create find books dispatcher action
   function findBooksAction(queryText) {
     dispatch({
-      eventId: "searchBooks",
+      eventId: 'searchBooks',
       payload: {
         queryText
       }
@@ -34,11 +34,11 @@ function Application() {
   }
 
   return (
-    <div>
+    <section>
       <Finder onUserSearch={findBooksAction} />
       <SubscribedBookList />
-    </div>
+    </section>
   );
 }
 
-ReactDOM.render(<Application />, document.getElementById("app"));
+ReactDOM.render(<Application />, document.getElementById('app'));
