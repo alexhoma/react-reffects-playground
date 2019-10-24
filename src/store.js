@@ -1,7 +1,8 @@
-import { store } from "reffects-store";
+import { store } from 'reffects-store';
 
 store.initialize({
-  books: []
+  books: [],
+  yearFilter: null
 });
 
 export default store;

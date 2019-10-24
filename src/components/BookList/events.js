@@ -10,8 +10,8 @@ export default function register() {
       return {
         get: {
           url: `${apiUrl}/search.json?q=${queryText}`,
-          successEvent: ['searchBooksSuccess']
-        }
+          successEvent: ['searchBooksSuccess'],
+        },
       };
     },
     ['apiUrl']
@@ -32,13 +32,13 @@ export default function register() {
           year: book.first_publish_year,
           authors: book.author_name,
           languages: book.language,
-          cover: `https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`
+          cover: `https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`,
         };
       })
       .filter(book => book !== null);
 
     return {
-      mutate: [{ path: ['books'], newValue: books }]
+      mutate: [{ path: ['books'], newValue: books }],
     };
   });
 }

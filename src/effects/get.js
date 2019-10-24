@@ -8,8 +8,8 @@ export default function register() {
       .then(res => res.json())
       .then(res => {
         dispatch({
-          eventId: successEvent[0],
-          payload: { ...res }
+          id: successEvent[0],
+          payload: { ...res },
         });
       });
   });

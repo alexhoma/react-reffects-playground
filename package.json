@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --no-cache --open",
+    "start": "NODE_ENV=development parcel index.html --no-cache --open",
     "build": "parcel build index.html --no-cache"
   },
   "dependencies": {
@@ -13,8 +13,9 @@
     "lodash.setwith": "4.3.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "reffects": "0.1.0",
-    "reffects-store": "0.1.4"
+    "reffects": "^0.1.6",
+    "reffects-store": "0.1.4",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

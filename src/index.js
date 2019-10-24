@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { dispatch } from 'reffects';
 
 import store from './store';
+
 import registerApiUrlCoeffect from './coeffects/api-url';
 import registerGetEffect from './effects/get';
 import registerMutateEffect from './effects/mutate';
@@ -22,20 +23,21 @@ registerMutateEffect(store);
 // Register events
 registerBookListEvents();
 
-function Application() {
-  // Create find books dispatcher action
-  function findBooksAction(queryText) {
-    dispatch({
-      eventId: 'searchBooks',
-      payload: {
-        queryText
-      }
-    });
-  }
+// Event dispatchers
+function findBooks(queryText) {
+  dispatch({
+    id: 'searchBooks',
+    payload: {
+      queryText,
+    },
+  });
+}
 
+// View component
+function Application() {
   return (
     <section>
-      <Finder onUserSearch={findBooksAction} />
+      <Finder onUserSearch={findBooks} />
       <SubscribedBookList />
     </section>
   );

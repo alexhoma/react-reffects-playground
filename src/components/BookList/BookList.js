@@ -1,5 +1,6 @@
 import React from 'react';
 import { subscribe } from 'reffects-store';
+import selectBooks from './selectors';
 import './BookList.css';
 
 function BookList({ books }) {
@@ -21,10 +22,8 @@ function BookList({ books }) {
   );
 }
 
-const SubscribedBookList = subscribe(function mapStateToProps(state) {
+export default subscribe(BookList, function mapStateToProps(state) {
   return {
-    books: state.books
+    books: selectBooks(state),
   };
 });
-
-export default SubscribedBookList(BookList);
